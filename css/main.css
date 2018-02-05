@@ -2,6 +2,9 @@ html, body {
     margin: 0;
 }
 
+img {
+	height: 100%;
+}
 .header {
     height: 60vh;
     width: 100%;
@@ -36,10 +39,70 @@ html, body {
     padding-left: 5px;
 }
 
+.row-left-major, .row-right-major {
+	display: inline-flex;
+	width: 100%;
+}
+.row-left-major {
+	flex-wrap: wrap;
+}
+.row-right-major {
+	flex-wrap: wrap-reverse;
+}
+
+.left-col-left-major, .right-col-right-major {
+	width: 70%;
+}
+
+.right-col-left-major, .left-col-right-major {
+	width: 30%;
+}
+.character, .back-shadow {
+	position: relative;
+}
+section {
+	padding-top: 90px;
+}
+.back-shadow,.back-shadow-over {
+	height: 400px;
+	width: 240px;
+}
+.back-shadow {
+	position: relative;
+	background: #ffc928a1;
+}
+.back-shadow-over {
+	position: absolute;
+	top: -30px;
+	left: -35px;
+	background: #ffc9286e;
+}
+.i-am-itachi {
+	background: url('../img/itachi.png');
+}
 @media (max-width: 760px) {
+	.left-col-left-major, .right-col-right-major,.right-col-left-major, .left-col-right-major {
+		width: 100%;
+	}
+	.character {
+		margin: 0 auto auto 15px;
+	}
+	.back-shadow-over {
+	position: absolute;
+	top: -15px;
+	left: -15px;
+]}
+	.back-shadow,.back-shadow-over {
+		height: 150px;
+		width: 100px;
+		margin: 0 auto;
+	}
     .header-over, .header {
         width: 100%;
-        height: auto;
+        height: 35vh;
+    }
+    section {
+    	padding-top: 40px;
     }
 
     .header-over p {
